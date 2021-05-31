@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.15.0.final using JasperReports Library version 6.15.0-dd49bfb94918336b8321d5507193f0169ead4e95  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Padre" language="javascript" pageWidth="595" pageHeight="842" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="20dbb44b-671b-4db8-9a6d-009851764551">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="BDsistema"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<parameter name="idruc" class="java.lang.String"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT "PROVEEDOR"."RUC",
+	"PROVEEDOR".razonsocial,
+	"PROVEEDOR".telefono,
+	"PROVEEDOR".email,
+	"PROVEEDOR".direccion,
+	"PROVEEDOR".lugar,
+	"PROVEEDOR".tipo,
+	"PROVEEDOR".celular
+FROM "PROVEEDOR"
+WHERE "PROVEEDOR"."RUC"= $P{idruc}]]>
+	</queryString>
+	<field name="RUC" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="RUC"/>
+		<property name="com.jaspersoft.studio.field.label" value="RUC"/>
+	</field>
+	<field name="razonsocial" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="razonsocial"/>
+		<property name="com.jaspersoft.studio.field.label" value="razonsocial"/>
+	</field>
+	<field name="telefono" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="telefono"/>
+		<property name="com.jaspersoft.studio.field.label" value="telefono"/>
+	</field>
+	<field name="email" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="email"/>
+		<property name="com.jaspersoft.studio.field.label" value="email"/>
+	</field>
+	<field name="direccion" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="direccion"/>
+		<property name="com.jaspersoft.studio.field.label" value="direccion"/>
+	</field>
+	<field name="lugar" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="lugar"/>
+		<property name="com.jaspersoft.studio.field.label" value="lugar"/>
+	</field>
+	<field name="tipo" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="tipo"/>
+		<property name="com.jaspersoft.studio.field.label" value="tipo"/>
+	</field>
+	<field name="celular" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="celular"/>
+		<property name="com.jaspersoft.studio.field.label" value="celular"/>
+	</field>
+	<group name="RUC">
+		<groupExpression><![CDATA[$F{RUC}]]></groupExpression>
+	</group>
+	<group name="razonsocial">
+		<groupExpression><![CDATA[$F{razonsocial}]]></groupExpression>
+	</group>
+	<group name="telefono">
+		<groupExpression><![CDATA[$F{telefono}]]></groupExpression>
+	</group>
+	<group name="email">
+		<groupExpression><![CDATA[$F{email}]]></groupExpression>
+	</group>
+	<group name="direccion">
+		<groupExpression><![CDATA[$F{direccion}]]></groupExpression>
+	</group>
+	<group name="lugar">
+		<groupExpression><![CDATA[$F{lugar}]]></groupExpression>
+	</group>
+	<group name="tipo">
+		<groupExpression><![CDATA[$F{tipo}]]></groupExpression>
+	</group>
+	<group name="celular">
+		<groupExpression><![CDATA[$F{celular}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="0" y="0" width="595" height="65" forecolor="#006699" backcolor="#006699" uuid="d948a82a-b194-4077-9f97-75e3c50d6ba4"/>
+				<staticText>
+					<reportElement x="20" y="0" width="575" height="65" forecolor="#FFFFFF" uuid="1a95f293-5d11-41f3-8964-56beca6ca1df"/>
+					<textElement textAlignment="Justified" verticalAlignment="Middle">
+						<font fontName="Arial" size="22" isBold="true"/>
+					</textElement>
+					<text><![CDATA[REPORTE DE PROVEEDORES]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="150" splitType="Stretch">
+			<staticText>
+				<reportElement x="1" y="50" width="134" height="20" uuid="ee34f49c-e747-459b-adf5-cf00c289416d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[RUC:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="83" width="134" height="20" uuid="ad9ef6e8-69fd-4250-84f3-aebe3f6fbbdc"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[R. SOCIAL:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="114" width="134" height="28" uuid="c69667b5-94ea-4680-87d8-0bb94aaf32bb"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[EMAIL:]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="50" width="275" height="1" forecolor="#57575E" uuid="29d41987-fab9-4dc0-9f4f-40656f82d645"/>
+			</line>
+			<line>
+				<reportElement x="0" y="83" width="274" height="1" forecolor="#57575E" uuid="580538a5-e156-4d71-872c-fadb78bd78b5"/>
+			</line>
+			<line>
+				<reportElement x="0" y="113" width="275" height="1" forecolor="#57575E" uuid="b85e1164-be38-4332-8519-973ff2954218"/>
+			</line>
+			<line>
+				<reportElement x="0" y="142" width="274" height="1" forecolor="#57575E" uuid="f667385c-71b6-4fdb-97dd-7c723f81eaee"/>
+			</line>
+			<line>
+				<reportElement x="274" y="50" width="1" height="92" forecolor="#57575E" uuid="0c19084f-d9f4-4b9a-917e-dcf743867383"/>
+			</line>
+			<line>
+				<reportElement x="0" y="51" width="1" height="92" forecolor="#57575E" uuid="8c70b79a-adf6-48fb-b696-47766c818a60"/>
+			</line>
+			<line>
+				<reportElement x="135" y="51" width="1" height="91" forecolor="#57575E" uuid="4175f07c-14a8-4fb1-ac84-8d8dd6b1d068"/>
+			</line>
+			<staticText>
+				<reportElement x="304" y="59" width="135" height="30" uuid="212be130-dde8-4a95-8535-6b8dd0a8da68"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Telefóno:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="304" y="92" width="135" height="30" uuid="89d6c04f-af18-49fe-8c5e-9ca5914f0044"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Dirección:]]></text>
+			</staticText>
+			<line>
+				<reportElement x="303" y="61" width="277" height="1" forecolor="#57575E" uuid="d78d6df4-4200-47f6-b902-302ea29285fd"/>
+			</line>
+			<line>
+				<reportElement x="303" y="89" width="276" height="1" forecolor="#57575E" uuid="a710ddcb-a4bd-4b0f-8eec-71484ceb4813"/>
+			</line>
+			<line>
+				<reportElement x="303" y="122" width="277" height="1" forecolor="#57575E" uuid="8f5ed774-84b0-4260-bb30-76b390817731"/>
+			</line>
+			<line>
+				<reportElement x="580" y="60" width="1" height="63" forecolor="#57575E" uuid="a81922ee-8164-4aaf-8522-5d160f5da99a"/>
+			</line>
+			<line>
+				<reportElement x="303" y="60" width="1" height="63" forecolor="#57575E" uuid="a3d5c747-eecb-4583-9f81-ba43bfe44401"/>
+			</line>
+			<line>
+				<reportElement x="439" y="60" width="1" height="63" forecolor="#57575E" uuid="954475c0-afa5-44e9-89ee-75f4af74f579"/>
+			</line>
+			<textField>
+				<reportElement x="136" y="51" width="138" height="30" uuid="d69790a6-a86a-42e7-8da6-9b220702a831"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{RUC}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="136" y="83" width="138" height="30" uuid="7d3aa3e8-124d-4928-a2e0-dbb47cb4e236"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{razonsocial}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="136" y="113" width="138" height="30" uuid="2517538d-5dad-4928-962c-6b8932898688"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{email}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="439" y="61" width="140" height="28" uuid="256b85b0-ce17-42ad-bb5e-5a1f4e9642cd"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{telefono}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="440" y="90" width="139" height="30" uuid="5af140c1-e90d-4058-947a-f88dafa379f6"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{direccion}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="248" splitType="Stretch">
+			<subreport>
+				<reportElement x="0" y="0" width="200" height="200" uuid="cba9da85-20e5-40b0-abee-c2120feeda01"/>
+				<subreportParameter name="idruc2">
+					<subreportParameterExpression><![CDATA[$F{RUC}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA["Hijo.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+</jasperReport>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.15.0.final using JasperReports Library version 6.15.0-dd49bfb94918336b8321d5507193f0169ead4e95  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Hijo" pageWidth="595" pageHeight="842" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="6e1ec6bf-49c3-44db-8b13-b6e900af345c">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="BDsistema"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<parameter name="idruc2" class="java.lang.String"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT "PROVEEDOR_DETALLE"."nrofactura",
+	"PROVEEDOR_DETALLE"."ruc",
+	"PROVEEDOR_DETALLE"."idProducto",
+	"PROVEEDOR_DETALLE".cantidad,
+	"PROVEEDOR_DETALLE".preciocompra,
+	"PROVEEDOR_DETALLE".precioventa
+FROM "PROVEEDOR_DETALLE"
+WHERE "PROVEEDOR_DETALLE"."ruc"= $P{idruc2}]]>
+	</queryString>
+	<field name="nrofactura" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="nrofactura"/>
+		<property name="com.jaspersoft.studio.field.label" value="nrofactura"/>
+	</field>
+	<field name="ruc" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="ruc"/>
+		<property name="com.jaspersoft.studio.field.label" value="ruc"/>
+	</field>
+	<field name="idProducto" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="idProducto"/>
+		<property name="com.jaspersoft.studio.field.label" value="idProducto"/>
+	</field>
+	<field name="cantidad" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="cantidad"/>
+		<property name="com.jaspersoft.studio.field.label" value="cantidad"/>
+	</field>
+	<field name="preciocompra" class="java.lang.Float">
+		<property name="com.jaspersoft.studio.field.name" value="preciocompra"/>
+		<property name="com.jaspersoft.studio.field.label" value="preciocompra"/>
+	</field>
+	<field name="precioventa" class="java.lang.Float">
+		<property name="com.jaspersoft.studio.field.name" value="precioventa"/>
+		<property name="com.jaspersoft.studio.field.label" value="precioventa"/>
+	</field>
+	<group name="nrofactura">
+		<groupExpression><![CDATA[$F{nrofactura}]]></groupExpression>
+	</group>
+	<group name="ruc">
+		<groupExpression><![CDATA[$F{ruc}]]></groupExpression>
+	</group>
+	<group name="idProducto">
+		<groupExpression><![CDATA[$F{idProducto}]]></groupExpression>
+	</group>
+	<group name="cantidad">
+		<groupExpression><![CDATA[$F{cantidad}]]></groupExpression>
+	</group>
+	<group name="preciocompra">
+		<groupExpression><![CDATA[$F{preciocompra}]]></groupExpression>
+	</group>
+	<group name="precioventa">
+		<groupExpression><![CDATA[$F{precioventa}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="91" splitType="Stretch">
+			<staticText>
+				<reportElement x="10" y="10" width="80" height="30" uuid="baa58232-9853-4c54-b024-d23807399c92"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Arial" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[RUC:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="100" y="10" width="100" height="30" uuid="d1f3a5cd-0534-45fc-ae6b-bbb4fb693a81"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{ruc}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="11" y="60" width="118" height="30" uuid="74971d94-370b-4964-9920-a41f4875160b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID PRODUCTO:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="152" y="60" width="118" height="30" uuid="1cf76734-510d-45d2-ac79-b969d07fa711"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CANTIDAD:]]></text>
+			</staticText>
+			<line>
+				<reportElement x="12" y="61" width="570" height="1" forecolor="#57575E" uuid="d9a92c9d-0051-4cf6-828c-7ee119481c68"/>
+			</line>
+			<line>
+				<reportElement x="11" y="60" width="1" height="30" forecolor="#57575E" uuid="5deef0be-5797-4f6c-bd8f-7279a27e282b"/>
+			</line>
+			<line>
+				<reportElement x="581" y="61" width="1" height="30" forecolor="#57575E" uuid="10ded92c-9db4-4f9f-9910-5e0912942095"/>
+			</line>
+			<staticText>
+				<reportElement x="310" y="60" width="118" height="30" uuid="9124386c-2923-45f6-be64-58de4d890038"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PRE-COMPRA:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="461" y="61" width="118" height="30" uuid="d3677c6b-a7a1-4bdf-acff-d3636b7e3daf"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NRO FACTURA:]]></text>
+			</staticText>
+			<line>
+				<reportElement x="12" y="90" width="570" height="1" forecolor="#57575E" uuid="99eda7ba-e9c0-4a2e-bc7b-6f772331e7c6"/>
+			</line>
+		</band>
+	</title>
+	<detail>
+		<band height="30">
+			<textField>
+				<reportElement x="153" y="0" width="118" height="30" uuid="6452663b-83f8-42ec-ad9b-089c71bbb08f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{cantidad}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="12" y="0" width="118" height="30" uuid="a7502d6b-dafc-410b-9d0e-08ef8d488bb5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idProducto}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="462" y="0" width="120" height="30" uuid="ec062c8d-4f88-4b11-b077-105ae3da3110"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{nrofactura}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="312" y="0" width="117" height="30" uuid="ba4ea6de-0471-48a7-ab8e-beacad78970e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{preciocompra}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>
